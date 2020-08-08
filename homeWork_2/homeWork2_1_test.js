@@ -1,29 +1,23 @@
-Feature('HomeWork-2: new TODO creating');
+Feature('HomeWork #2.1: new TODO creating');
 
 const {pageForHomeWork2} = inject();
 const assert = require('assert');
 
 
 Before((I) => { 
-
 	I.amOnPage(pageForHomeWork2.pageStructure.url);
-
 });
 
 
  
 Scenario(`The page ${pageForHomeWork2.pageStructure.url} should open with label "todos"`, (I) => {
-
 	I.see('todos')
-
 });
 
 
 
 Scenario(`Old TODO items should absent for default state of page (e.g. on incognito tab)`, (I, pageForHomeWork2) => {
-
 	I.dontSeeElement(pageForHomeWork2.pageStructure.elements.listOfToDo.container)
-
 });
 
 
