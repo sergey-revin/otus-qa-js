@@ -4,7 +4,7 @@
   "description": "otus qa project",
   "main": "index.js",
   "scripts": {
-    "test": "npx codeceptjs run --steps"
+    "test": "npx codeceptjs run "
   },
   "repository": {
     "type": "git",
