@@ -13,6 +13,7 @@
 	},
 
 	"rules": {
-		"codeceptjs/no-pause-in-scenario": "off"
+		"codeceptjs/no-pause-in-scenario": "off",
+		"codeceptjs/no-exclusive-tests": "off"
 	}
 }

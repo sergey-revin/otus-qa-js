@@ -1,31 +1,31 @@
 Feature('HomeWork #2.1: new TODO creating');
 
-const {pageForHomeWork2} = inject();
+const {todomvcPageObject} = inject();
 const assert = require('assert');
 
 
 Before((I) => { 
-	I.amOnPage(pageForHomeWork2.pageStructure.url);
+	I.amOnPage(todomvcPageObject.pageStructure.url);
 });
 
 
  
-Scenario(`The page ${pageForHomeWork2.pageStructure.url} should open with label "todos"`, (I) => {
+Scenario(`The page ${todomvcPageObject.pageStructure.url} should open with label "todos"`, (I) => {
 	I.see('todos')
 });
 
 
 
-Scenario(`Old TODO items should absent for default state of page (e.g. on incognito tab)`, (I, pageForHomeWork2) => {
-	I.dontSeeElement(pageForHomeWork2.pageStructure.elements.listOfToDo.container)
+Scenario(`Old TODO items should absent for default state of page (e.g. on incognito tab)`, (I, todomvcPageObject) => {
+	I.dontSeeElement(todomvcPageObject.pageStructure.elements.listOfToDo.container)
 });
 
 
 
-Scenario('Created TODO item should have the right value after Enter', async (I, pageForHomeWork2) => {
+Scenario('Created TODO item should have the right value after Enter', async (I, todomvcPageObject) => {
 		
 	// arrange
-	const pageElements = pageForHomeWork2.pageStructure.elements;
+	const pageElements = todomvcPageObject.pageStructure.elements;
 	const etalonText = 'My first TODO';
 
 	// action
@@ -43,10 +43,10 @@ Scenario('Created TODO item should have the right value after Enter', async (I, 
 
 
 
-Scenario('Created TODO item should have the righ value after F5', async (I, pageForHomeWork2) => {
+Scenario('Created TODO item should have the righ value after F5', async (I, todomvcPageObject) => {
 		
 	// arrange
-	const pageElements = pageForHomeWork2.pageStructure.elements;
+	const pageElements = todomvcPageObject.pageStructure.elements;
 	const etalonText = 'My first TODO';
 
 	// action
@@ -56,7 +56,7 @@ Scenario('Created TODO item should have the righ value after F5', async (I, page
 	I.pressKey('Enter');
 	I.waitForElement({css: pageElements.listOfToDo.firstElement.label});
 	//reloaad page
-	I.amOnPage(pageForHomeWork2.pageStructure.url);
+	I.amOnPage(todomvcPageObject.pageStructure.url);
 	I.wait(2);
     I.waitForElement({css: pageElements.listOfToDo.firstElement.label});
 	const  savedText = await I.grabTextFrom({css: pageElements.listOfToDo.firstElement.label});

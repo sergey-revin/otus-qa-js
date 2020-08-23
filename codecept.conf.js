@@ -5,7 +5,7 @@ const { setHeadlessWhen } = require('@codeceptjs/configure');
 setHeadlessWhen(process.env.HEADLESS);
 
 exports.config = {
-	tests: './homeWork_2/*_test.js',
+	tests: './homeWork_3/homeWork3_1_test.js',
 	output: './output',
 
 	helpers: {
@@ -21,7 +21,7 @@ exports.config = {
 
 	include: {
 		I: './steps_file.js',
-		pageForHomeWork2: './homeWork_2/homeWork2PageObject.js'
+		todomvcPageObject: './pageObjects/todomvc_pageObject.js'
 		
 
 	},

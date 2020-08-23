@@ -1,6 +1,6 @@
 Feature('HomeWork #2.2: "Naughty Strings" can be used as TODO item');
 
-const {pageForHomeWork2} = inject();
+const {todomvcPageObject} = inject();
 const assert = require('assert');
 const fileSystem = require('fs');
 
@@ -20,7 +20,7 @@ arrayOfNaughtyString.forEach((item) => {
 
 
 Before((I) => { 
-	I.amOnPage(pageForHomeWork2.pageStructure.url);
+	I.amOnPage(todomvcPageObject.pageStructure.url);
 });
 
 
@@ -28,7 +28,7 @@ Before((I) => {
 Data(testDataTable).Scenario(`The saved "naughty string" should be equal to the entered one`, async (I, current) => {
 
 	// arrange
-	const pageElements = pageForHomeWork2.pageStructure.elements;
+	const pageElements = todomvcPageObject.pageStructure.elements;
 	const etalonText = current.naughtyString;
 
 	// action
