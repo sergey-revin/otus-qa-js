@@ -5,7 +5,7 @@ const { setHeadlessWhen } = require('@codeceptjs/configure');
 setHeadlessWhen(process.env.HEADLESS);
 
 exports.config = {
-	tests: './homeWork_3/homeWork3_1_test.js',
+	tests: './homeWork_4/nomeWork4_1_test.js',
 	output: './output',
 
 	helpers: {
@@ -16,6 +16,10 @@ exports.config = {
 			chrome: {
 				args: ['--window-size=1800,1000']
 			}
+		},
+		
+		REST: {
+			
 		}
 	},
 
