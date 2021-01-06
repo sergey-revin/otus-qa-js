@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/sergey-revin/otus-qa-js#readme",
   "devDependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "codeceptjs": "^2.6.7",
     "eslint": "^7.6.0",
     "eslint-plugin-codeceptjs": "^1.3.0",
